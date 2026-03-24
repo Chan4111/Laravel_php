@@ -159,3 +159,29 @@ route::fallback(function(){
   // ya nhi to koi file ke name 
   return view('fallback');
 });
+
+
+//Blade Some operation
+route::get('/blade', function(){
+   return view('BasicBlade');
+});
+
+
+//Opertion of Include function
+route::get('/pages/Home', function(){
+   return view('pages.HomePage');
+});
+
+Route::prefix('pages')->group(function(){
+    Route::get('/about' ,function(){
+       return view('pages.about');
+    });
+
+    Route::get('/service' ,function(){
+       return view('pages.service');
+    });
+    Route::get('/contact' ,function(){
+       return view('pages.contact');
+    });
+    
+});

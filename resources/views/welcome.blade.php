@@ -12,3 +12,9 @@
 
 <p>** How to Use Route Group </p>
 <a href="/GroupRouter"> Group Router Operation</a>
+
+<p>**All Blade Operation is Here</p>
+<a href="/blade">Click to See Blade method</a>
+
+<p>To See the include method in Blade template</p>
+<a href="/pages/Home">To see Include method</a>
