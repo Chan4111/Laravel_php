@@ -6,3 +6,9 @@
 <a href="/post/firstpost"> My details </a><br>
 <a href="/chandan"> Chandan detail By post ID </a><br>
 <a href="/chandan1"> Chandan detail By post ID that is Optional </a><br>
+
+<p>***How to use Name Route</p>
+<a href="/NamePage">Name page Start</a>
+
+<p>** How to Use Route Group </p>
+<a href="/GroupRouter"> Group Router Operation</a>
