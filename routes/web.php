@@ -185,3 +185,23 @@ Route::prefix('pages')->group(function(){
     });
     
 });
+
+
+//Opertain of blade Inheritance
+route::get('Inheritance/Masterlayout', function(){
+    return view('inheritance.masterlayout');
+});
+
+Route::prefix('Inheritance')->group(function(){
+    Route::get('/about' ,function(){
+       return view('Inheritance.About');
+    });
+
+    Route::get('/detail' ,function(){
+       return view('Inheritance.Detail');
+    });
+    Route::get('/post' ,function(){
+       return view('Inheritance.Post');
+    });
+    
+});

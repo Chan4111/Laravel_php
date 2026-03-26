@@ -18,3 +18,6 @@
 
 <p>To See the include method in Blade template</p>
 <a href="/pages/Home">To see Include method</a>
+
+<p>To See the Blade Inheritance (yeild,extends,section)</p>
+<a href="/Inheritance/Masterlayout">To see Include method</a>
