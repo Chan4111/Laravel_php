@@ -2,6 +2,8 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\MockObject\Stub\ReturnValueMap;
+use function Laravel\Prompts\alert;
 
 Route::get('/', function () {
     return view('welcome');
@@ -204,4 +206,23 @@ Route::prefix('Inheritance')->group(function(){
        return view('Inheritance.Post');
     });
     
+});
+
+
+
+///**Operation for Passing Data: Route to view
+route::get('PassingData/users', function(){
+  return view('passingdata.users');
+});
+
+route::get('PassingData/users', function(){ ///aaaaaaaaaaaab hum yha se  value send kr rahe hai 
+  $name ='Chandan Thakur';
+ // return view('passingdata.users',['user'=>$name]);        /// ab jo user ese jo view file me bhejna hai wha call krna hai
+ //return view('passingdata.users',['user'=>$name ,'city'=>'Lucknow','phone'=>'874598612'],);     // ab bina call variable declar kiye more than one
+ return view('passingdata.users',
+ ['user'=>$name,
+  'city' => 'lucknow',
+  'phone' => '<script>alert("875462154");</script>'
+ ]);   
+
 });

@@ -21,3 +21,6 @@
 
 <p>To See the Blade Inheritance (yeild,extends,section)</p>
 <a href="/Inheritance/Masterlayout">To see Include method</a>
+
+<p>Operation for Passing Data: Route to view</p>
+<a href="/PassingData/users">To see How to Passing Data from route to view</a>
