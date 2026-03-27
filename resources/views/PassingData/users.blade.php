@@ -1,5 +1,7 @@
 <h1>Passing Data Router To View</h1>
-<!-- To call the variable of route variable -->
- <h2>{{ $user }}</h2>
-<h3>{{ $city }}</h3>
-<h3>{!! $phone !!}</h3>
+
+
+<!--  for Multiple Array -->
+  @foreach ($user as $id=>$u )
+  <h3>{{ $u['name'] }} | {{ $u['phone'] }} | {{ $u['city'] }}</h3>
+  @endforeach

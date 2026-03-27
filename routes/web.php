@@ -216,13 +216,39 @@ route::get('PassingData/users', function(){
 });
 
 route::get('PassingData/users', function(){ ///aaaaaaaaaaaab hum yha se  value send kr rahe hai 
-  $name ='Chandan Thakur';
+ //$name ='Chandan Thakur';
  // return view('passingdata.users',['user'=>$name]);        /// ab jo user ese jo view file me bhejna hai wha call krna hai
  //return view('passingdata.users',['user'=>$name ,'city'=>'Lucknow','phone'=>'874598612'],);     // ab bina call variable declar kiye more than one
+/*Method2
  return view('passingdata.users',
  ['user'=>$name,
   'city' => 'lucknow',
   'phone' => '<script>alert("875462154");</script>'
  ]);   
+ */
 
+//Method2 
+/* return view('passingdata.users')
+ ->with('user',$name)
+ ->with('city','Lucknow')
+ ->with('phone','548986554');
+*/
+
+//Method3
+/*return view('passingdata.users')
+->withUser($name)
+->withCity('delhi')
+->withPhone('854879865');
+*/
+
+///Ab Use Krege multiArrays
+$name=[
+ 1 => ['name'=>'chandan','phone'=>'8798546587','city'=>'Lucknow'],
+ 2 => ['name'=>'Prashant','phone'=>'8798546587','city'=>'Delhi'],
+ 3 => ['name'=>'Satyam','phone'=>'8798546587','city'=>'Darbhanga'],
+ 4 => ['name'=>'Kunal','phone'=>'8798546587','city'=>'Lucknow'],
+];
+return view('passingdata.users',[
+   'user' => $name,
+]);
 });
